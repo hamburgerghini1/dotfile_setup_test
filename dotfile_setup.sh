@@ -79,7 +79,10 @@ elif [ "$package_manager" == "apt" ]; then
 echo "Installing Nix package manager"
     sh <(curl -L https://nixos.org/nix/install) --daemon
 echo "Installing Programs"
-    sudo apt install -y flatpak firefox chromium-browser
+    sudo apt install -y firefox chromium-browser
+    sudo add-apt-repository ppa:flatpak/stable
+    sudo apt update
+    sudo apt install flatpak nala 
     flatpak install -y net.davidotek.pupgui2 protontricks
 fi
 
