@@ -73,6 +73,7 @@ echo "Installing Nix package manager"
     sh <(curl -L https://nixos.org/nix/install) --daemon
 echo "Installing programs"
     sudo dnf install -y flatpak firefox chromium steam discord
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install -y net.davidotek.pupgui2 protontricks
 elif [ "$package_manager" == "apt" ]; then
 echo "Installing Nix package manager"
