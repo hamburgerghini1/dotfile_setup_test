@@ -64,7 +64,7 @@ sudo rm /usr/src/Python-3.11.3.tgz
 cd /home/tommi/Ducuments/GitHub
 git clone https://github.com/moverest/sway-interactive-screenshot
 chmod +x sway-interactive-screenshot
-./sway-interactive-screenshot
+cp -r sway-interactive-screenshot /usr/bin/
 
 # reboot
 reboot
